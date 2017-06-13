@@ -7,9 +7,8 @@ import Show from './pages/show'
 import { NativeRouter, Route, Switch } from 'react-router-native'
 import { Provider } from 'react-redux'
 import store from './store'
+import Bookmarks from './pages/bookmarks'
 
-
-console.log('store', store)
 
 NativeTachyons.build(
   {
@@ -26,7 +25,7 @@ class App extends React.Component {
         <View>
           <Route exact path="/" component={List} />
           <Switch>
-            <Route path="/settings" component={Settings} />
+            <Route path="/bookmarks" component={Bookmarks} />
             <Route path="/show" component={Show} />
           </Switch>
         </View>

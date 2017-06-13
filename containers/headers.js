@@ -10,10 +10,12 @@ import { Constants } from 'expo'
 import { Octicons } from '@expo/vector-icons'
 import { Link  } from 'react-router-native'
 
+
 import { wrap } from 'react-native-style-tachyons'
 
 
-const Header = () => {
+const Header = (props) => {
+  console.log('headerProps', props)
   return (
     <View
       cls="h3 bg-lightgray jcsb aic flx-row"
@@ -23,8 +25,8 @@ const Header = () => {
         <Octicons name="mark-github" cls="f3 ml2" />
       </TouchableOpacity>
       <Text cls="black f4">GitHub Trends</Text>
-      <Link to='./settings'>
-        <Octicons name="gear" cls="f3 mr2" />
+      <Link to='./bookmarks'>
+        <Octicons name="bookmark" cls="f3 mr2" />
       </Link>
     </View>
   )

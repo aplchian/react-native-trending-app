@@ -20,12 +20,14 @@ class List extends React.Component {
               }))
     }
     this.props.dispatch(getTrendingRepos)
+    console.log('list props', this.props)
   }
 
   render() {
+
     return (
       <View>
-        <Header />
+        <Header {...this.props} />
         <Repos dataSource={this.props.dataSource} />
       </View>
     )
